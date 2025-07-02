@@ -1,0 +1,62 @@
+name: 🚀 Change Request
+description: Solicitar un cambio para despliegue en producción
+title: "[CR]: <AppName>:<Version>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **IMPORTANTE:** Completa claramente cada sección del formulario para facilitar la evaluación y aprobación del cambio solicitado.
+
+  - type: input
+    id: requester
+    attributes:
+      label: "👤 Solicitante"
+      description: "Nombre o usuario del solicitante del cambio."
+      placeholder: "Ejemplo: @kcontrerasro_bac"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: application
+    attributes:
+      label: "📦 Aplicación o Servicio afectado"
+      description: "Selecciona la aplicación o servicio del monorepo que será afectado por este cambio."
+      options:
+        - "app-frontend"
+        - "app-backend"
+        - "service-auth"
+        - "service-payment"
+        - "service-notifications"
+        - "infraestructura"
+        - "otro (especificar en descripción)"
+    validations:
+      required: true
+
+- type: dropdown
+    id: type
+    attributes:
+      label: "📦 Tipo de cambio"
+      description: "Selecciona el tipo de cambio a aplicar."
+      options:
+        - "Mejora"
+        - "Incidente"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Descripción del Cambio"
+      description: "Describe detalladamente el cambio propuesto, indicando claramente qué se modificará y por qué."
+      placeholder: "Describe el cambio aquí..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "⚠️ Impacto y Riesgos Potenciales"
+      description: "Describe cualquier riesgo o impacto potencial que pueda ocurrir al aplicar este cambio."
+      placeholder: "Riesgos o impactos potenciales..."
+    validations:
+      required: true
