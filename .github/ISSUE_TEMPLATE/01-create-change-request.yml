@@ -28,7 +28,6 @@ body:
         - "service-payment"
         - "service-notifications"
         - "infraestructura"
-        - "otro (especificar en descripción)"
     validations:
       required: true
 
