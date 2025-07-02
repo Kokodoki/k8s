@@ -1,20 +1,11 @@
 name: 🚀 Change Request
 description: Solicitar un cambio para despliegue en producción
-title: "[CR]: <AppName>:<Version>"
+title: "[CR]: <app_name>:<version>"
 body:
   - type: markdown
     attributes:
       value: |
         ⚠️ **IMPORTANTE:** Completa claramente cada sección del formulario para facilitar la evaluación y aprobación del cambio solicitado.
-
-  - type: input
-    id: requester
-    attributes:
-      label: "👤 Solicitante"
-      description: "Nombre o usuario del solicitante del cambio."
-      placeholder: "Ejemplo: @kcontrerasro_bac"
-    validations:
-      required: true
 
   - type: dropdown
     id: application
@@ -28,6 +19,15 @@ body:
         - "service-payment"
         - "service-notifications"
         - "infraestructura"
+    validations:
+      required: true
+
+- type: input
+    id: version
+    attributes:
+      label: "Nueva Version a aplicar"
+      description: Indicar cual es la nueva versión a desplegar
+      placeholder: 1.5.0
     validations:
       required: true
 
