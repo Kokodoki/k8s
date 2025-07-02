@@ -1,5 +1,5 @@
-name: 🚀 Change Request
-description: Solicitar un cambio para despliegue en producción
+name: "🚀 Change Request"
+description: "Solicitar un cambio para despliegue en producción"
 title: "[CR]: <app_name>:<version>"
 body:
   - type: markdown
